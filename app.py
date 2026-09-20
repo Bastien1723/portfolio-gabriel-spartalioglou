@@ -3,7 +3,8 @@ import os, re
 
 app = Flask(__name__)
 
-PROJETS_DIR = os.path.join(os.path.dirname(__file__), 'projets')
+PROJETS_DIR = os.path.dirname(__file__)
+EXCLUDE_DIRS = {'static', 'templates', '.git', '.github', '__pycache__', '10_Master'}
 IMG_EXT     = {'.jpg', '.jpeg', '.png', '.gif', '.webp'}
 ALL_EXT     = IMG_EXT | {'.pdf'}
 
@@ -92,7 +93,9 @@ def lire_projets():
     if not os.path.exists(PROJETS_DIR):
         return []
     projets = []
-    for dossier in sorted(os.listdir(PROJETS_DIR)):
+        for dossier in sorted(os.listdir(PROJETS_DIR)):
+        if dossier in EXCLUDE_DIRS or dossier.startswith('.'):
+            continue
         chemin = os.path.join(PROJETS_DIR, dossier)
         if not os.path.isdir(chemin):
             continue
