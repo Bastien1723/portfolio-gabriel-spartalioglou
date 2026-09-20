@@ -10,10 +10,10 @@ ALL_EXT     = IMG_EXT | {'.pdf'}
 
 # ── À personnaliser ────────────────────────────────────────────────────────
 CONFIG = {
-    'nom'        : 'Gabriel SPARTALIOGLOU',
-    'titre'      : 'Étudiant en architecture · ENSAPB- PORTEFOLIO',
+    'nom'        : 'Gabriel Spartalioglou',
+    'titre'      : 'Étudiant en architecture · ENSAPB',
     'disciplines': 'Réhabilitation · Réemploi · Participation',
-    'email'      : 'spartag13@gmail.com',
+    'email'      : 'contact@email.com',
     'instagram'  : 'https://instagram.com/toncompte',
     'behance'    : 'https://behance.net/toncompte',
     'linkedin'   : 'https://linkedin.com/in/toncompte',
@@ -93,7 +93,7 @@ def lire_projets():
     if not os.path.exists(PROJETS_DIR):
         return []
     projets = []
-        for dossier in sorted(os.listdir(PROJETS_DIR)):
+    for dossier in sorted(os.listdir(PROJETS_DIR)):
         if dossier in EXCLUDE_DIRS or dossier.startswith('.'):
             continue
         chemin = os.path.join(PROJETS_DIR, dossier)
