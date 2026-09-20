@@ -10,7 +10,7 @@ ALL_EXT     = IMG_EXT | {'.pdf'}
 
 # ── À personnaliser ────────────────────────────────────────────────────────
 CONFIG = {
-    'nom'        : 'Gabriel Spartalioglou',
+    'nom'        : 'GABRIEL SPARTALIOGLOU',
     'titre'      : 'Étudiant en architecture · ENSAPB',
     'disciplines': 'Réhabilitation · Réemploi · Participation',
     'email'      : 'contact@email.com',
